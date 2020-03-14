@@ -4,7 +4,7 @@ var url = "mongodb://localhost:27017/";
  
 MongoClient.connect(url, function(err, db) {
     if (err) throw err;
-    var dbo = db.db("test");
+    var dbo = db.db("runoob");
     var myobj =  [
         { name: '菜鸟工具', url: 'https://c.runoob.com', type: 'cn'},
         { name: 'Google', url: 'https://www.google.com', type: 'en'},
@@ -14,6 +14,7 @@ MongoClient.connect(url, function(err, db) {
         if (err) throw err;
         // res.insertedCount 为插入的条数。
         console.log("插入的文档数量为: " + res.insertedCount);
+        console.log(res);
         db.close();
     });
 });

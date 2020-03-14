@@ -13,6 +13,7 @@ MongoClient.connect(url, function(err, db) {
     dbo.collection("site").insertOne(myobj, function(err, res) {
         if (err) throw err;
         console.log("文档插入成功");
+        console.log(res);
         db.close();
     });
 });

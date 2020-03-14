@@ -7,18 +7,18 @@ MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("runoob");
     // 返回集合中所有数据
-    // dbo.collection("site"). find({}).toArray(function(err, result) { 
-    //     if (err) throw err;
-    //     console.log(result);
-    //     db.close();
-    // });
-    
-    // 匹配条件查询
-    var whereStr = {"name":'菜鸟教程'};  // 查询条件
-    dbo.collection("site").find(whereStr).toArray(function(err, result) {
+    dbo.collection("site"). find({}).toArray(function(err, result) { 
         if (err) throw err;
         console.log(result);
         db.close();
     });
+    
+    // 匹配条件查询
+    // var whereStr = {"name":'菜鸟教程'};  // 查询条件
+    // dbo.collection("site").find(whereStr).toArray(function(err, result) {
+    //     if (err) throw err;
+    //     console.log(result);
+    //     db.close();
+    // });
     
 });
