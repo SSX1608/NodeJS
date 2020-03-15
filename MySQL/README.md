@@ -26,7 +26,8 @@
           ]
 
 
-ORM:对象管理模型
+ORM:对象管理模型，Object-Relational Mapping，把关系数据库的表结构映射到对象上
+  我们选择Node的ORM框架Sequelize来操作数据库。这样，我们读写的都是JavaScript对象，Sequelize帮我们把对象变成数据库中的行。
   在ORM中，
   应用到数据库需要一个驱动，此时是node-mysql的驱动，就是mysql2，需要手动安装一下
   node-application -->ORM(sequlize)-->驱动(node-mysql) -->mysql db
